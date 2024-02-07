@@ -1,7 +1,8 @@
-def searchPrefix(arr,s)
-
-end
-
-print(searchPrefix(["abcde", "abdf", "adeab", "abdgse", "bdefa", "bacdef"],"ab"))
-
-print(searchPrefix(["abcde", "abdf", "adeab", "abdgse", "bdefa", "bacdef"],"b"))
+def searchPrefix(arr, s)
+    arr.select { |item| item.start_with?(s) }
+  end
+  input_string = gets.chomp
+  my_array = input_string.split
+  puts"Starts with: "
+  prefix = gets.chomp
+  puts searchPrefix(my_array,prefix).inspect
